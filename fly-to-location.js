@@ -7,46 +7,46 @@ function flyToLocation(lon, lat, zoom) {
   });
 }
 // fly to specific cities on the map
-document.getElementById("tbilisi").addEventListener("click", () => {
+document.getElementById("linköping").addEventListener("click", () => {
   // Fly to Location 1
-  flyToLocation(44.8, 41.729, 11);
+  flyToLocation(44.8, 41.729, 12);
 });
 
-document.getElementById("batumi").addEventListener("click", () => {
+document.getElementById("stockholm").addEventListener("click", () => {
   // Fly to Location 2
   flyToLocation(41.654, 41.651, 12.5);
 });
 
-document.getElementById("kutaisi").addEventListener("click", () => {
+document.getElementById("malmö").addEventListener("click", () => {
   // Fly to Location 3
   flyToLocation(42.693, 42.251, 12.5);
 });
 
-document.getElementById("zugdidi").addEventListener("click", () => {
+document.getElementById("norrköping").addEventListener("click", () => {
   // Fly to Location 3
   flyToLocation(41.863, 42.51, 12.5);
   zoom: 13;
 });
 
-document.getElementById("gori").addEventListener("click", () => {
+document.getElementById("gothenburg").addEventListener("click", () => {
   // Fly to Location 3
   flyToLocation(44.114, 41.984, 13);
   zoom: 13;
 });
 
-document.getElementById("poti").addEventListener("click", () => {
+document.getElementById("lund").addEventListener("click", () => {
   // Fly to Location 3
   flyToLocation(41.668, 42.14, 13.5);
   zoom: 13;
 });
 
-document.getElementById("sokhumi").addEventListener("click", () => {
+document.getElementById("umeå").addEventListener("click", () => {
   // Fly to Location 3
   flyToLocation(41.009, 43.001, 13.5);
   zoom: 13;
 });
 
-document.getElementById("akhaltsikhe").addEventListener("click", () => {
+document.getElementById("uppsala").addEventListener("click", () => {
   // Fly to Location 3
   flyToLocation(42.991, 41.64, 13.5);
   zoom: 13;
