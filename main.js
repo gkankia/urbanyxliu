@@ -319,3 +319,8 @@ document.addEventListener("DOMContentLoaded", function () {
             generateIsochrone(lngLat);
         });
     });
+    
+    // Disable right-click context menu
+    document.addEventListener('contextmenu', function(event) {
+        event.preventDefault();
+    });
