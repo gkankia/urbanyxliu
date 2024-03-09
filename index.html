@@ -41,7 +41,7 @@ body {
 
 h1 {
     font-family: JetBrains Mono, monospace;
-    font-size: 35px;
+    font-size: 30px;
     color: #ffffff;
     margin: 0;
     font-weight: 800;
@@ -62,11 +62,11 @@ h1 {
     padding: 5px;
 }
 
-
 .symbol, .text {
     display: flex;
     margin: 5px;
 }
+
 /* The page is split between map and sidebar - the sidebar gets 1/3, map
 gets 2/3 of the page. You can adjust this to your personal liking. */
 .sidebar {
@@ -94,7 +94,7 @@ gets 2/3 of the page. You can adjust this to your personal liking. */
     background: #6c86cf;
     box-shadow: 0 0 150px 0 #35414c;
     width: 100%;
-    height: 100px;
+    height: 60px;
     line-height: 100px;
     padding: 0 10px;
     z-index: 1;
@@ -354,7 +354,7 @@ p.footer {
     margin-left: auto;
     margin-right: auto;
     position: absolute;
-    top: 100px;
+    top: 50px;
     font-family:  JetBrains Mono, monospace;
     font-size: 25px;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
@@ -390,16 +390,27 @@ p.footer {
         z-index: 1;
     }
 
+    h1 {
+        font-size: 20px;
+    }
+
+    .heading {
+        position: absolute;
+        background: #6c86cf;
+        box-shadow: 0 0 50px 0 #35414c;
+        width: 100%;
+        height: 60px;
+        line-height: 100px;
+        padding: 0 10px;
+        z-index: 1;
+    }
+
     .map {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 80%;
-    }
-
-    .legend {
-        display: none; /* Hide the legend on small screens */
     }
 }
 
