@@ -377,6 +377,32 @@ p.footer {
     display: none !important;
 }
 
+/* Add a media query for screens smaller than 768px (tablets and mobile) */
+@media only screen and (max-width: 768px) {
+    .sidebar {
+        position: relative;
+        width: 100%; /* Make the sidebar take up full width */
+        height: auto;
+        background-color: transparent;
+    }
+
+    .map {
+        position: relative;
+        width: 100%; /* Make the map take up full width */
+        left: 0;
+    }
+
+    .legend {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        width: 100%; /* Make the legend take up full width */
+        margin: 0;
+        padding: 10px; /* Add padding for better readability */
+        text-align: center; /* Center the legend */
+    }
+}
+
 </style>
 <head>   
     <body>         
