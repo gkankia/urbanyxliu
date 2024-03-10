@@ -85,9 +85,9 @@
 
             // Mapping between data source values and display names
             var dataSourceDisplayNames = {
-                "pois-eatout": " 🍔 Eating Out",
-                "pois-health": " ⚕️ Healthcare",
-                "pois-financial": " 💰 Banking"
+                "pois-eatout": " 🍔 Eating Out locations",
+                "pois-health": " ⚕️ Healthcare facilities",
+                "pois-financial": " 💰 Banking services"
             };
 
             // Fetch point features from selected data source
@@ -141,7 +141,7 @@
 
             // Update legend title based on selected data source
             var legendTitle = document.getElementById("legend-title");
-            legendTitle.innerHTML = "<p>There are a total of " + "<strong> <span class='innerhtml' style='color: yellow; background-color: black'>" + totalCount + "</strong></span>" + (selectedDataSourceDisplayName || selectedDataSource.toUpperCase()) + " locations within " + "<strong> <span class='innerhtml' style='color: yellow; background-color: black'>" + contours_minutes + " minutes " + profile + "</span></strong> distance</p>";
+            legendTitle.innerHTML = "<p>There are a total of " + "<strong> <span class='innerhtml' style='color: yellow; background-color: black'>" + totalCount + "</strong></span>" + (selectedDataSourceDisplayName || selectedDataSource.toUpperCase()) + " within " + "<strong> <span class='innerhtml' style='color: yellow; background-color: black'>" + contours_minutes + " minutes " + profile + "</span></strong> distance</p>";
 
             // Clear the legend before updating it with new items
             var legend = document.getElementById("legend");
