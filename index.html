@@ -390,6 +390,18 @@ footer {
     margin-right: 5px;
 }
 
+.tooltip {
+    position: absolute;
+    display: none;
+    z-index: 9999;
+    background-color: rgba(108, 134, 207, 0.75);
+    color: #fff;
+    padding: 0 20px 0 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 0 #35414c;
+    font-family:  JetBrains Mono, monospace;
+}
+
 .mapboxgl-ctrl-logo {
     display: none !important;
 }
@@ -496,9 +508,12 @@ footer {
             <div id="map" class="map">
                 <div id="legend" class="legend"></div>
                 <div id="legend-title"></div>
+                <div id="tooltip" class="tooltip"></div>
             </div>
+        </div>
         <script src="./main.js"></script>
-        <script src="./minified-fly.js"></script>
+        <script src="./tooltip.js"></script>
+        <script src="./fly-to-location.js"></script>
     
 </body>
 </head> 
