@@ -163,12 +163,18 @@
                 clinic: "#a6cee3", // Color for clinic
                 dentist: "#cab2d6", // Color for dentist
                 hospital: "#fb9a99", // Color for hospital
-                pharmacy: "#fdbf6f", // Color for pharmacy
+                pharmacy: {
+                    // Define colors for different pharmacy brands
+                    brand1: "#3366cc", // Color for brand 1
+                    brand2: "#dc3912", // Color for brand 2
+                    brand3: "#ff9900", // Color for brand 3
+                    // Add more brands as needed
+                },
                 veterinary: "#b2df8a", // Color for veterinary
                 atm: "#ffff99", // Color for atm
                 payment_terminal: "#ff7f00", // Color for payment_terminal
                 bank: "#33a02c", // Color for bank
-            };
+            };            
 
             // Iterate over each category and update legend
             for (var category in counts) {
