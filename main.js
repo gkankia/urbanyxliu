@@ -85,16 +85,16 @@
 
             // Mapping between data source values and display names
             var dataSourceDisplayNames = {
-                "pois-eatout": " 🍔 Eating Out locations",
-                "pois-health": " ⚕️ Healthcare facilities",
-                "pois-financial": " 💰 Banking services"
+                "pois-leisure": " leisure spots",
+                "pois-health": " healthcare facilities",
+                "pois-financial": " banking services"
             };
 
             // Fetch point features from selected data source
             var selectedDataSource = document.getElementById("data_source").value;
             var dataUrl;
-            if (selectedDataSource === "pois-eatout") {
-                dataUrl = "https://raw.githubusercontent.com/gkankia/urbanyxliu/main/data%20collection/osm/pois-eatout.geojson";
+            if (selectedDataSource === "pois-leisure") {
+                dataUrl = "https://raw.githubusercontent.com/gkankia/urbanyxliu/main/data%20collection/osm/pois-leisure.geojson";
             } else if (selectedDataSource === "pois-health") {
                 dataUrl = "https://raw.githubusercontent.com/gkankia/urbanyxliu/main/data%20collection/osm/pois-health.geojson";
             } else if (selectedDataSource === "pois-financial") {
@@ -153,6 +153,7 @@
                 bar: "#c51b7d", // Color for bar
                 cafe: "#fdbf6f", // Color for cafe
                 restaurant: "#80cdc1", // Color for restaurant
+                nightclub: "#41b6c4",
                 clinic: "#a6cee3", // Color for clinic
                 dentist: "#cab2d6", // Color for dentist
                 hospital: "#fb9a99", // Color for hospital
@@ -252,6 +253,8 @@ map.on("load", function () {
             "#fdbf6f", // Color for cafes                   
             "restaurant",                   
             "#80cdc1", // Color for restaurants
+            "nightclub",
+            "#41b6c4", // Color for nightclubs
             "clinic",                   
             "#a6cee3", // Color for clinics        
             "dentist",
