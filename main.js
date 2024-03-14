@@ -3,10 +3,10 @@
        var map = new mapboxgl.Map({
             container: "map",
             style: "mapbox://styles/jorjone90/cltetry3r00r301nw54sh4jal",
-            center: [44.812, 41.741787],
+            center: [15.650354, 58.396637],
             zoom: 12,
-            //bearing: -36.26,
-            //pitch: 72.29,
+            //bearing: -16.25,
+            //pitch: 31.29,
             attributionControl: false,
         });
 
@@ -85,27 +85,20 @@
 
             // Mapping between data source values and display names
             var dataSourceDisplayNames = {
-                "pois-leisure": " leisure spots",
-                "pois-health": " healthcare centers",
-                "pois-bank": " bank offices",
-                "pois-atm": " ATMs",
-                "pois-pharmacy": " pharmacies",
-                "pois-payment": " payment kiosks"
+                "pois-eatout": " 🍔 Eating Out locations",
+                "pois-health": " ⚕️ Healthcare facilities",
+                "pois-financial": " 💰 Banking services"
             };
 
             // Fetch point features from selected data source
             var selectedDataSource = document.getElementById("data_source").value;
             var dataUrl;
-            if (selectedDataSource === "pois-leisure") {
-                dataUrl = "https://raw.githubusercontent.com/axis-Z/urbanyxv1/main/data/pois-eatout.geojson";
+            if (selectedDataSource === "pois-eatout") {
+                dataUrl = "https://raw.githubusercontent.com/gkankia/urbanyxliu/main/data%20collection/osm/pois-eatout.geojson";
             } else if (selectedDataSource === "pois-health") {
-                dataUrl = "https://raw.githubusercontent.com/axis-Z/urbanyxv1/main/data/pois-health.geojson";
-            } else if (selectedDataSource === "pois-bank") {
-                dataUrl = "https://raw.githubusercontent.com/axis-Z/urbanyxv1/main/data/pois-financial.geojson";
-            } else if (selectedDataSource === "pois-atm") {
-                dataUrl = "https://raw.githubusercontent.com/axis-Z/urbanyxv1/main/data/pois-financial.geojson";
-            } else if (selectedDataSource === "pois-pharmacy") {
-                dataUrl = "https://raw.githubusercontent.com/axis-Z/urbanyxv1/main/data/pois-financial.geojson";
+                dataUrl = "https://raw.githubusercontent.com/gkankia/urbanyxliu/main/data%20collection/osm/pois-health.geojson";
+            } else if (selectedDataSource === "pois-financial") {
+                dataUrl = "https://raw.githubusercontent.com/gkankia/urbanyxliu/main/data%20collection/osm/pois-banking.geojson";
             }
 
 
@@ -163,18 +156,12 @@
                 clinic: "#a6cee3", // Color for clinic
                 dentist: "#cab2d6", // Color for dentist
                 hospital: "#fb9a99", // Color for hospital
-                pharmacy: {
-                    // Define colors for different pharmacy brands
-                    brand1: "#3366cc", // Color for brand 1
-                    brand2: "#dc3912", // Color for brand 2
-                    brand3: "#ff9900", // Color for brand 3
-                    // Add more brands as needed
-                },
+                pharmacy: "#fdbf6f", // Color for pharmacy
                 veterinary: "#b2df8a", // Color for veterinary
                 atm: "#ffff99", // Color for atm
                 payment_terminal: "#ff7f00", // Color for payment_terminal
                 bank: "#33a02c", // Color for bank
-            };            
+            };
 
             // Iterate over each category and update legend
             for (var category in counts) {
@@ -331,4 +318,9 @@ document.addEventListener("DOMContentLoaded", function () {
             // Call function to generate isochrone
             generateIsochrone(lngLat);
         });
+    });
+    
+    // Disable right-click context menu
+    document.addEventListener('contextmenu', function(event) {
+        event.preventDefault();
     });
