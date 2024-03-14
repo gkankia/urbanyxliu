@@ -7,48 +7,48 @@ function flyToLocation(lon, lat, zoom) {
   });
 }
 // fly to specific cities on the map
-document.getElementById("linköping").addEventListener("click", () => {
+document.getElementById("tbilisi").addEventListener("click", () => {
   // Fly to Location 1
-  flyToLocation(15.650354, 58.396637, 12.5);
+  flyToLocation(44.8, 41.729, 11);
 });
 
-document.getElementById("stockholm").addEventListener("click", () => {
+document.getElementById("batumi").addEventListener("click", () => {
   // Fly to Location 2
-  flyToLocation(18.044447, 59.316629, 11.5);
+  flyToLocation(41.654, 41.651, 12.5);
 });
 
-document.getElementById("malmö").addEventListener("click", () => {
+document.getElementById("kutaisi").addEventListener("click", () => {
   // Fly to Location 3
-  flyToLocation(13.016948, 55.583480, 11.5);
+  flyToLocation(42.693, 42.251, 12.5);
 });
 
-document.getElementById("norrköping").addEventListener("click", () => {
+document.getElementById("zugdidi").addEventListener("click", () => {
   // Fly to Location 3
-  flyToLocation(16.186906, 58.587211, 13);
+  flyToLocation(41.863, 42.51, 12.5);
   zoom: 13;
 });
 
-document.getElementById("gothenburg").addEventListener("click", () => {
+document.getElementById("gori").addEventListener("click", () => {
   // Fly to Location 3
-  flyToLocation(11.968393, 57.704154, 11.5);
+  flyToLocation(44.114, 41.984, 13);
   zoom: 13;
 });
 
-document.getElementById("lund").addEventListener("click", () => {
+document.getElementById("poti").addEventListener("click", () => {
   // Fly to Location 3
-  flyToLocation(13.194567, 55.700901, 13);
+  flyToLocation(41.668, 42.14, 13.5);
   zoom: 13;
 });
 
-document.getElementById("umeå").addEventListener("click", () => {
+document.getElementById("sokhumi").addEventListener("click", () => {
   // Fly to Location 3
-  flyToLocation(20.261937, 63.822252, 13);
+  flyToLocation(41.009, 43.001, 13.5);
   zoom: 13;
 });
 
-document.getElementById("uppsala").addEventListener("click", () => {
+document.getElementById("akhaltsikhe").addEventListener("click", () => {
   // Fly to Location 3
-  flyToLocation(17.644119, 59.854053, 13);
+  flyToLocation(42.991, 41.64, 13.5);
   zoom: 13;
 });
 

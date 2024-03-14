@@ -3,10 +3,10 @@
        var map = new mapboxgl.Map({
             container: "map",
             style: "mapbox://styles/jorjone90/cltetry3r00r301nw54sh4jal",
-            center: [15.650354, 58.396637],
+            center: [44.812, 41.741787],
             zoom: 12,
-            //bearing: -16.25,
-            //pitch: 31.29,
+            //bearing: -36.26,
+            //pitch: 72.29,
             attributionControl: false,
         });
 
@@ -85,20 +85,27 @@
 
             // Mapping between data source values and display names
             var dataSourceDisplayNames = {
-                "pois-eatout": " 🍔 Eating Out locations",
-                "pois-health": " ⚕️ Healthcare facilities",
-                "pois-financial": " 💰 Banking services"
+                "pois-leisure": " leisure spots",
+                "pois-health": " healthcare centers",
+                "pois-bank": " bank offices",
+                "pois-atm": " ATMs",
+                "pois-pharmacy": " pharmacies",
+                "pois-payment": " payment kiosks"
             };
 
             // Fetch point features from selected data source
             var selectedDataSource = document.getElementById("data_source").value;
             var dataUrl;
-            if (selectedDataSource === "pois-eatout") {
-                dataUrl = "https://raw.githubusercontent.com/gkankia/urbanyxliu/main/data%20collection/osm/pois-eatout.geojson";
+            if (selectedDataSource === "pois-leisure") {
+                dataUrl = "https://raw.githubusercontent.com/axis-Z/urbanyxv1/main/data/pois-eatout.geojson";
             } else if (selectedDataSource === "pois-health") {
-                dataUrl = "https://raw.githubusercontent.com/gkankia/urbanyxliu/main/data%20collection/osm/pois-health.geojson";
-            } else if (selectedDataSource === "pois-financial") {
-                dataUrl = "https://raw.githubusercontent.com/gkankia/urbanyxliu/main/data%20collection/osm/pois-banking.geojson";
+                dataUrl = "https://raw.githubusercontent.com/axis-Z/urbanyxv1/main/data/pois-health.geojson";
+            } else if (selectedDataSource === "pois-bank") {
+                dataUrl = "https://raw.githubusercontent.com/axis-Z/urbanyxv1/main/data/pois-financial.geojson";
+            } else if (selectedDataSource === "pois-atm") {
+                dataUrl = "https://raw.githubusercontent.com/axis-Z/urbanyxv1/main/data/pois-financial.geojson";
+            } else if (selectedDataSource === "pois-pharmacy") {
+                dataUrl = "https://raw.githubusercontent.com/axis-Z/urbanyxv1/main/data/pois-financial.geojson";
             }
 
 
@@ -318,9 +325,4 @@ document.addEventListener("DOMContentLoaded", function () {
             // Call function to generate isochrone
             generateIsochrone(lngLat);
         });
-    });
-    
-    // Disable right-click context menu
-    document.addEventListener('contextmenu', function(event) {
-        event.preventDefault();
     });

@@ -12,7 +12,6 @@ map.on('mousemove', 'featuresWithinIsochrone-layer', function (e) {
         var opening_hours = (hoveredFeature.properties.hasOwnProperty('opening_hours') && hoveredFeature.properties.opening_hours !== null) ? hoveredFeature.properties.opening_hours : 'N/A';
         var phone = (hoveredFeature.properties.hasOwnProperty('phone') && hoveredFeature.properties.phone !== null) ? hoveredFeature.properties.phone : 'N/A';
         var website = (hoveredFeature.properties.hasOwnProperty('website') && hoveredFeature.properties.webiste !== null) ? hoveredFeature.properties.website : 'N/A';
-
         var fullAddress = (address || housenumber) ? ((address || '') + ' ' + (housenumber || '')) : 'N/A';
 
         var tooltip = document.getElementById('tooltip');
@@ -46,5 +45,4 @@ map.on('mousemove', 'featuresWithinIsochrone-layer', function (e) {
         var tooltip = document.getElementById('tooltip');
         tooltip.style.display = 'none';
     });
-    
 });
